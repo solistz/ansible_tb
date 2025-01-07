@@ -1,10 +1,3 @@
-- name: Add user black
-  user:
-    name: black
-    shell: /bin/bash
-    createhome: yes
-    groups: ssh_login, sudo_admins
-    append: yes
 
 - name: Add user zhydan-ap
   user:
@@ -13,12 +6,6 @@
     createhome: yes
     groups: ssh_login, sudo_admins
     append: yes
-
-- name: Set authorized key for black
-  authorized_key:
-    user: black
-    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHVlS3eakI31WMVzw3WEiWoLNFXZPdqA8mcAoPYEse2J6mLwbIS17m4OEt89I6bYCZuKgLZSoAlNX3ulv392wrkhC8MRwmokb2/yWjEyzxRkHUBwK1qFm7SerycKKyx14TcV7lAdQ3eq03Vvf3sIbzicr9R6TXN2uyVYPtLh7eLuZrlAjKrWo5sKHd9U5NYEE8vjmjvveuEkDfrJ3T39vSh9Y41I0HgdmVrcn8LKXZtMNfwLc2pm4HW/8ZtVnng6/IVLykksnFMmWy/kimcU7UhSrXu/R+IzYIU4MiIMCMOJvKS3Uz8nYSsEDXDLGVcp4GV0+/lVP+Ap/eSJsuAjPjytFeTIx6Zs8aCFIFp9JxqUtUL1ZqD22GnwzrC2zXzaTTNdae64oazd+crcYJHCd3iSzAhDKhUEUuJhIKUlWpjkZIded+AGrvyymT/o3oNt8M6J6KGeB1iY2VPyQusUraUndP89WNbzPRryU2PbogSWhT+YNRk8fGohd0GYnkwxU= black@black"
-    state: present
 
 - name: Set authorized key zhydan-ap
   authorized_key:
