@@ -1,0 +1,4 @@
+- hosts: tb
+  become: yes
+  roles:
+    - ping

@@ -1,0 +1,23 @@
+---
+- name: Remove users
+  user:
+    name: "{{ item }}"
+    state: absent
+    remove: yes
+  with_items: "{{ del_userlist }}"
+
+- name: Add required users
+  user:
+    name: "{{ item }}"
+    shell: /bin/bash
+    createhome: yes
+    groups: ssh_login, sudo_admins
+    append: yes
+  with_items: "{{ add_userlist }}"
+
+- name: Add SSH public keys
+  authorized_key:
+    user: "{{ item }}"
+    key: "{{ lookup('file', 'keys/{{ item }}') }}"
+    state: present
+  with_items: "{{ add_userlist }}"

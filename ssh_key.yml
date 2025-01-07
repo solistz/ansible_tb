@@ -1,0 +1,4 @@
+- hosts: wpnginx
+  become: yes
+  roles:
+    - ssh_key

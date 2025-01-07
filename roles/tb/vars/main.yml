@@ -1,0 +1,26 @@
+# vars file for tb
+---
+security_sshd_name: ssh
+
+__postgresql_version: "15"
+__postgresql_daemon: "postgresql@{{ postgresql_version }}-main"
+
+
+__postgresql_packages:
+  - postgresql
+  - postgresql-contrib
+  - libpq-dev
+postgresql_python_library: python3-psycopg2
+
+postgresql_locales:
+  - 'en_US.UTF-8'
+
+postgresql_user: tb
+postgresql_password: pass_db_tb
+postgresql_db: db_tb
+postgresql_host: localhost
+postgresql_port: 5432
+postgresql_superuser: postgres
+postgresql_superuser_password: 111111
+
+

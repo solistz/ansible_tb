@@ -1,0 +1,6 @@
+- hosts: tb
+  # remote_user: "{{ ssh_user }}"
+  become: yes
+  roles:
+    - upd
+

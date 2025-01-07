@@ -1,0 +1,5 @@
+---
+#ansible_password		: 111111
+#ansible_ssh_user		: root
+ansible_user                    : zhydan-ap
+ansible_ssh_private_key_file    : /home/zh/.ssh/id_rsa

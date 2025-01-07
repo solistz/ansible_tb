@@ -1,0 +1,17 @@
+[wp]
+wp_2508 # local-host /home/zh/.ssh/config -> 
+
+#Host wp_2507
+#  HostName hez.km.ua
+#  Port 2507
+#  User zhydan-ap
+#  IdentityFile /home/zh/.ssh/id_rsa
+
+[wpnginx]
+"{{ ssh_host }}"
+
+[strongswan]
+10.200.0.25
+
+[tb]
+192.168.0.129

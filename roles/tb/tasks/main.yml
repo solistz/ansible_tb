@@ -1,0 +1,11 @@
+---
+## instal soft
+#- include_tasks: setup-Debian.yml
+## add group & sudoers
+#- include_tasks: addg.yml
+## add user
+#- include_tasks: addu.yml
+#- include_tasks: sshconf.yml
+- include_tasks: pass.yml
+#- include_tasks: addusrdb.yml
+
